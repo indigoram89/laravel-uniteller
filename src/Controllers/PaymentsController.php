@@ -16,13 +16,9 @@ class PaymentsController
 
     public function status(Request $request)
     {
-        info('request', $request->all());
-
         if ($this->uniteller->checkPaymentCompleted($request)) {
-            info('completed');
             $this->uniteller->dispatchPaymentCompleted($request);
         } else if ($this->uniteller->checkPaymentCancelled($request)) {
-            info('cancelled');
             $this->uniteller->dispatchPaymentCancelled($request);
         }
 
