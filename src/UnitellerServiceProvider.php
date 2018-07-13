@@ -12,7 +12,7 @@ class UnitellerServiceProvider extends ServiceProvider
      *
      * @var bool
      */
-    protected $defer = false;
+    protected $defer = true;
 
 	/**
      * Bootstrap any application services.
