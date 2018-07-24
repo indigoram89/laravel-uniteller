@@ -51,8 +51,8 @@ class Uniteller implements UnitellerContract
 			'URL_RETURN_OK' => 'required|string|url',
 			'URL_RETURN_NO' => 'required|string|url',
 
-			'MeanType' => 'nullable|integer|0,1,2,3,4,5',
-			'EMoneyType' => 'nullable|integer|0,1,13,18,19,29',
+			'MeanType' => 'nullable|integer|in:0,1,2,3,4,5',
+			'EMoneyType' => 'nullable|integer|in:0,1,13,18,19,29',
 			
 			'Language' => 'nullable|string|in:en,ru',
 			'Comment' => 'nullable|string|min:1|max:1024',
