@@ -33,11 +33,11 @@ class UnitellerServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->singleton('uniteller', function ($app) {
+        $this->app->singleton(UnitellerContract::class, function ($app) {
             return new Uniteller($app);
         });
 
-        $this->app->alias('uniteller', UnitellerContract::class);
+        $this->app->alias(UnitellerContract::class, 'uniteller');
     }
 
     /**
