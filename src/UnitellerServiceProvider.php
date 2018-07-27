@@ -47,6 +47,6 @@ class UnitellerServiceProvider extends ServiceProvider
      */
     public function provides()
     {
-        return ['uniteller'];
+        return ['uniteller', UnitellerContract::class];
     }
 }
